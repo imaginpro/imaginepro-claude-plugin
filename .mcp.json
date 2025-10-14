@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "imaginepro": {
+      "command": "npx",
+      "args": ["-y", "imaginepro-mcp-server"],
+      "env": {
+        "IMAGINEPRO_API_KEY": "${IMAGINEPRO_API_KEY}"
+      }
+    }
+  }
+}

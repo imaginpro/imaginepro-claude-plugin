@@ -1,0 +1,116 @@
+{
+  "name": "imaginepro",
+  "displayName": "ImaginePro - AI Image & Video Generator",
+  "description": "Professional AI image and video generation for developers. Generate web assets, UI components, marketing materials, and videos without leaving Claude Code. Features specialized agents for web development, UI/UX design, marketing, and video production workflows.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ImaginePro",
+    "email": "support@imaginepro.ai",
+    "url": "https://imaginepro.ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imaginpro/imaginepro-claude-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/imaginpro/imaginepro-claude-plugin/issues"
+  },
+  "homepage": "https://github.com/imaginpro/imaginepro-claude-plugin#readme",
+  "license": "MIT",
+  "keywords": [
+    "image-generation",
+    "video-generation",
+    "ai",
+    "creative",
+    "imaginepro",
+    "web-assets",
+    "ui-design",
+    "marketing",
+    "productivity"
+  ],
+  "categories": [
+    "productivity",
+    "creative",
+    "ai-tools",
+    "development"
+  ],
+  "engines": {
+    "claudeCode": ">=2.0.0",
+    "node": ">=18.0.0"
+  },
+  "requirements": {
+    "environment": {
+      "IMAGINEPRO_API_KEY": {
+        "description": "Your ImaginePro API key from https://imaginepro.ai - Sign up for free and get your API key from account settings",
+        "required": true,
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "npm": {
+        "imaginepro-mcp-server": "^1.1.0"
+      }
+    }
+  },
+  "features": {
+    "agents": [
+      {
+        "name": "web-asset-producer",
+        "description": "Generate production-ready assets for web development (hero images, backgrounds, etc.)"
+      },
+      {
+        "name": "ui-asset-generator",
+        "description": "Create design system assets, icons, and UI illustrations"
+      },
+      {
+        "name": "marketing-creative",
+        "description": "Generate marketing materials, ads, and social media content"
+      },
+      {
+        "name": "video-director",
+        "description": "Specialized in video generation workflows and motion content"
+      }
+    ],
+    "commands": [
+      {
+        "name": "imagine-pro",
+        "description": "Intelligent image generation with prompt guidance and best practices"
+      },
+      {
+        "name": "upscale-it",
+        "description": "Quick upscaling for production-ready quality"
+      },
+      {
+        "name": "vary-it",
+        "description": "Smart variations and refinements of generated images"
+      },
+      {
+        "name": "video-flow",
+        "description": "Complete video generation workflow automation"
+      },
+      {
+        "name": "imagine-guide",
+        "description": "Interactive guide for learning ImaginePro workflows"
+      }
+    ],
+    "mcpServers": [
+      {
+        "name": "imaginepro",
+        "description": "ImaginePro MCP server providing 8 AI generation tools"
+      }
+    ]
+  },
+  "documentation": {
+    "quickStart": "docs/quick-start.md",
+    "workflows": "docs/workflows/",
+    "promptLibrary": "docs/prompt-library/",
+    "examples": "examples/",
+    "troubleshooting": "docs/troubleshooting.md"
+  },
+  "support": {
+    "documentation": "https://github.com/imaginpro/imaginepro-claude-plugin#readme",
+    "issues": "https://github.com/imaginpro/imaginepro-claude-plugin/issues",
+    "community": "https://github.com/imaginpro/imaginepro-claude-plugin/discussions",
+    "website": "https://imaginepro.ai"
+  }
+}
