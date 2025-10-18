@@ -47,9 +47,11 @@ Access to 8 ImaginePro MCP tools:
 
 ### Prerequisites
 
-- [Claude Code](https://claude.ai/claude-code) >= 2.0.0
-- Node.js >= 18.0.0
-- ImaginePro API key ([get one free](https://imaginepro.ai))
+- **Claude Code** >= 2.0.0 - [Download here](https://claude.ai/claude-code)
+- **Node.js** >= 18.0.0 - Required for the MCP server
+- **ImaginePro API key** - [Sign up free at imaginepro.ai](https://imaginepro.ai)
+
+> **Note:** The MCP server (`imaginepro-mcp-server`) is automatically installed via `npx` when the plugin loads - no manual installation needed!
 
 ### Installation
 
@@ -69,11 +71,14 @@ export IMAGINEPRO_API_KEY="sk-your-api-key-here"
 #### Option 2: From GitHub
 
 ```bash
-# Add the plugin repository
-/plugin marketplace add imaginpro/imaginepro-claude-plugin
+# Add the plugin repository (full URL format)
+/plugin marketplace add https://github.com/imaginpro/imaginepro-claude-plugin
 
 # Install
 /plugin install imaginepro
+
+# Verify installation
+/plugin list
 
 # Set your API key
 export IMAGINEPRO_API_KEY="sk-your-api-key-here"
@@ -82,11 +87,18 @@ export IMAGINEPRO_API_KEY="sk-your-api-key-here"
 #### Option 3: Local Development
 
 ```bash
+# Clone the repository
 git clone https://github.com/imaginpro/imaginepro-claude-plugin.git
 cd imaginepro-claude-plugin
 
-# Add local plugin
+# Add local plugin using absolute path
+/plugin marketplace add /path/to/imaginepro-claude-plugin
+
+# Or use relative path if in the plugin directory
 /plugin marketplace add ./
+
+# Install
+/plugin install imaginepro
 
 # Set your API key
 export IMAGINEPRO_API_KEY="sk-your-api-key-here"
@@ -96,13 +108,31 @@ export IMAGINEPRO_API_KEY="sk-your-api-key-here"
 
 1. Sign up at [imaginepro.ai](https://imaginepro.ai)
 2. Navigate to account settings
-3. Generate an API key
-4. Copy and export it: `export IMAGINEPRO_API_KEY="sk-your-key"`
+3. Generate an API key (starts with `sk-`)
+4. Set it as an environment variable
 
-Make it permanent:
+**For current session:**
 ```bash
-echo 'export IMAGINEPRO_API_KEY="sk-your-key"' >> ~/.zshrc
+export IMAGINEPRO_API_KEY="sk-your-api-key-here"
+```
+
+**Make it permanent (choose your shell):**
+
+For Zsh (macOS default):
+```bash
+echo 'export IMAGINEPRO_API_KEY="sk-your-api-key-here"' >> ~/.zshrc
 source ~/.zshrc
+```
+
+For Bash:
+```bash
+echo 'export IMAGINEPRO_API_KEY="sk-your-api-key-here"' >> ~/.bash_profile
+source ~/.bash_profile
+```
+
+**Verify it's set:**
+```bash
+echo $IMAGINEPRO_API_KEY
 ```
 
 ## 📖 Usage Examples
